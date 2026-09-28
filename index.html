@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE „TintaSuTela” SRL - Imprimare și Pictură Haine Personalizate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="TintaSuTela Logo" class="logo-img">
+            <span class="company-name">FE „TintaSuTela” SRL</span>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#acasa" class="active">Acasă</a></li>
+                <li><a href="#despre">Despre noi</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#categorii">Categorii</a></li>
+                <li><a href="#personalizare">Personalizare</a></li>
+                <li><a href="#contacte">Contacte</a></li>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Acasă Section -->
+        <section id="acasa" class="hero" style="background-image: url('fundal.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <img src="logo.jpg" alt="Logo" class="hero-logo">
+                <h1 class="slogan">Creează. Pictează. Poartă.</h1>
+                <p class="hero-subtitle">Transformă-ți ideile în haine unice, pictate și imprimate cu pasiune.</p>
+                <div class="hero-buttons">
+                    <a href="#personalizare" class="btn-primary">Personalizează acum</a>
+                    <a href="#catalog" class="btn-secondary">Vezi catalogul</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Oferim produse -->
+        <section class="offerings-overview">
+            <div class="container">
+                <h2>Ce oferim</h2>
+                <div class="offerings-grid">
+                    <div class="offering-card">
+                        <i class="fas fa-tshirt"></i>
+                        <h3>Maiouri și Tricouri</h3>
+                        <p>Materiale de înaltă calitate, personalizate cu designuri unice.</p>
+                    </div>
+                    <div class="offering-card">
+                        <i class="fas fa-vest"></i>
+                        <h3>Hanorace</h3>
+                        <p>Confortabile și moderne, ideale pentru orice stil urban.</p>
+                    </div>
+                    <div class="offering-card">
+                        <i class="fas fa-hat-cowboy"></i>
+                        <h3>Chipiuri</h3>
+                        <p>Accesorii stilate imprimate sau brodate după bunul plac.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Despre noi Section -->
+        <section id="despre" class="about-section">
+            <div class="container">
+                <h2>Despre noi</h2>
+                <div class="about-content">
+                    <div class="about-block">
+                        <h3>Despre companie</h3>
+                        <p>TintaSuTela este o firmă specializată în crearea și personalizarea articolelor vestimentare. Oferim produse precum tricouri, hanorace și chipiuri, pe care clienții le pot personaliza după propriile idei și preferințe. Ne concentrăm pe creativitate, calitate și posibilitatea de a transforma fiecare idee într-un produs unic.</p>
+                    </div>
+                    <div class="about-block">
+                        <h3>Istoria</h3>
+                        <p>TintaSuTela a apărut din dorința de a combina moda cu creativitatea. Ideea companiei a pornit de la conceptul că hainele nu trebuie să fie doar obiecte vestimentare, ci și o modalitate prin care fiecare persoană își poate exprima stilul și personalitatea. Astfel, am creat un concept bazat pe haine personalizate și designuri originale.</p>
+                    </div>
+                    <div class="about-block">
+                        <h3>Misiunea</h3>
+                        <p>Misiunea noastră este să oferim clienților posibilitatea de a-și transforma ideile în haine personalizate, accesibile și originale. Dorim să punem accent pe creativitate, calitate și satisfacția fiecărui client.</p>
+                    </div>
+                    <div class="about-block">
+                        <h3>Viziunea</h3>
+                        <p>Viziunea TintaSuTela este de a deveni un brand apreciat pentru produsele vestimentare personalizate și pentru designurile sale creative. Ne dorim să dezvoltăm constant colecția și să oferim clienților tot mai multe posibilități de personalizare.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Catalog Section -->
+        <section id="catalog" class="catalog-section">
+            <div class="container">
+                <h2>Catalog produse</h2>
+                <p class="section-desc">Explorează colecția noastră împărțită pe categorii, alături de noutăți și oferte speciale.</p>
+                
+                <div class="catalog-filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Toate</button>
+                    <button class="filter-btn" data-filter="tricouri">Tricouri & Maiouri (3)</button>
+                    <button class="filter-btn" data-filter="hanorace">Hanorace (2)</button>
+                    <button class="filter-btn" data-filter="chipiuri">Chipiuri (2)</button>
+                    <button class="filter-btn" data-filter="noutati">Noutăți și Oferte</button>
+                </div>
+
+                <div class="products-grid" id="catalog-products">
+                    <!-- Tricouri (3 bucăți) -->
+                    <div class="product-card" data-category="tricouri">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Tricou 1">
+                        <div class="product-info">
+                            <span class="badge">Tricouri</span>
+                            <h3>Tricou Pictat Manual „Galaxy”</h3>
+                            <p class="description">Bumbac 100%, culori textile rezistente la spălare.</p>
+                            <div class="price-row">
+                                <span class="price">450 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Tricou Pictat Galaxy', 450)">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="tricouri">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80" alt="Tricou 2">
+                        <div class="product-info">
+                            <span class="badge">Tricouri</span>
+                            <h3>Tricou Abstract Streetart</h3>
+                            <p class="description">Design modern urban cu elemente grafice unice.</p>
+                            <div class="price-row">
+                                <span class="price">390 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Tricou Abstract Streetart', 390)">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="tricouri">
+                        <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=600&q=80" alt="Maiou">
+                        <div class="product-info">
+                            <span class="badge">Tricouri</span>
+                            <h3>Maiou Sport & Casual</h3>
+                            <p class="description">Maiou lejer pentru vară, personalizabil față/spate.</p>
+                            <div class="price-row">
+                                <span class="price">320 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Maiou Sport & Casual', 320)">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hanorace (2 bucăți) -->
+                    <div class="product-card" data-category="hanorace">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Hanorac 1">
+                        <div class="product-info">
+                            <span class="badge">Hanorace</span>
+                            <h3>Hanorac Oversized „TST Classic”</h3>
+                            <p class="description">Hanorac gros, pufos, cu broderie argintie pe piept.</p>
+                            <div class="price-row">
+                                <span class="price">850 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Hanorac Oversized TST Classic', 850)">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="hanorace">
+                        <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" alt="Hanorac 2">
+                        <div class="product-info">
+                            <span class="badge">Hanorace</span>
+                            <h3>Hanorac Pictat „Midnight Neon”</h3>
+                            <p class="description">Ediție specială pictată manual cu efecte vizuale deosebite.</p>
+                            <div class="price-row">
+                                <span class="price">950 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Hanorac Midnight Neon', 950)">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chipiuri (2 bucăți) -->
+                    <div class="product-card" data-category="chipiuri">
+                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80" alt="Chipiu 1">
+                        <div class="product-info">
+                            <span class="badge">Chipiuri</span>
+                            <h3>Șapcă Snapback „TST Monogram”</h3>
+                            <p class="description">Șapcă reglabilă cu broderie argintie metalizată.</p>
+                            <div class="price-row">
+                                <span class="price">280 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Șapcă Snapback TST Monogram', 280)">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="chipiuri">
+                        <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=600&q=80" alt="Chipiu 2">
+                        <div class="product-info">
+                            <span class="badge">Chipiuri</span>
+                            <h3>Șapcă Classic Curved</h3>
+                            <p class="description">Design minimalist, bumbac 100% premium.</p>
+                            <div class="price-row">
+                                <span class="price">250 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Șapcă Classic Curved', 250)">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Noutăți și oferte speciale -->
+                    <div class="product-card" data-category="noutati">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80" alt="Ofertă">
+                        <div class="product-info">
+                            <span class="badge special">Ofertă Specială</span>
+                            <h3>Pachet Duo: Tricou + Șapcă</h3>
+                            <p class="description">Pachet promoțional cu reducere 15% inclusă.</p>
+                            <div class="price-row">
+                                <span class="price">650 MDL <del>730 MDL</del></span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Pachet Duo Tricou + Șapcă', 650)">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Categorii & Produse Populare -->
+        <section id="categorii" class="categories-section">
+            <div class="container">
+                <h2>Categorii & Produse Populare</h2>
+                <p class="section-desc">Modele de top preferate de clienții TintaSuTela.</p>
+                <div class="popular-grid">
+                    <div class="popular-item">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=400&q=80" alt="Tricouri">
+                        <h4>Tricouri & Maiouri</h4>
+                        <p class="pop-price">De la 320 MDL</p>
+                    </div>
+                    <div class="popular-item">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=400&q=80" alt="Hanorace">
+                        <h4>Hanorace</h4>
+                        <p class="pop-price">De la 850 MDL</p>
+                    </div>
+                    <div class="popular-item">
+                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=400&q=80" alt="Chipiuri">
+                        <h4>Chipiuri</h4>
+                        <p class="pop-price">De la 250 MDL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. De ce TintaSuTela? & 6. Call to Action -->
+        <section class="why-us-section">
+            <div class="container">
+                <h2>De ce TintaSuTela?</h2>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Design original</h3>
+                        <p>Fiecare piesă este creată cu atenție artistică deosebită.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-magic"></i>
+                        <h3>Personalizare după preferințele tale</h3>
+                        <p>Tu alegi detaliile, noi dăm viață ideii tale.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-gem"></i>
+                        <h3>Produse pentru fiecare stil</h3>
+                        <p>De la casual la urban street-style, avem tot ce-ți dorești.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Atenție la detalii</h3>
+                        <p>Materiale premium și finisaje impecabile la fiecare comandă.</p>
+                    </div>
+                </div>
+
+                <div class="cta-banner">
+                    <h2>Ai o idee?</h2>
+                    <p>Transform-o în ceva ce poți purta.</p>
+                    <a href="#personalizare" class="btn-primary">Începe personalizarea</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Personalizare Interactiv -->
+        <section id="personalizare" class="customizer-section">
+            <div class="container">
+                <h2>Studio Personalizare Haine</h2>
+                <p class="section-desc">Alege mărimea, culoarea, tipul de haină, poziția și designul dorit, apoi adaugă în coș!</p>
+                
+                <div class="customizer-container">
+                    <div class="customizer-preview">
+                        <div class="mockup-display" id="mockup-box">
+                            <i class="fas fa-tshirt fa-4x" id="garment-icon"></i>
+                            <div class="preview-text" id="preview-text-display">Designul tău aici</div>
+                            <span class="preview-pos-badge" id="pos-badge">Față</span>
+                        </div>
+                        <div class="price-tag-box">
+                            Preț estimat: <span id="dynamic-price">400 MDL</span>
+                        </div>
+                    </div>
+
+                    <form class="customizer-form" id="custom-form" onsubmit="handleCustomOrder(event)">
+                        <div class="form-group">
+                            <label><i class="fas fa-tshirt"></i> Ce fel de haină vrei?</label>
+                            <select id="garment-type" onchange="updateCustomizer()">
+                                <option value="maiou" data-price="320">Maiou (320 MDL)</option>
+                                <option value="tricou" data-price="400" selected>Tricou (400 MDL)</option>
+                                <option value="hanorac" data-price="850">Hanorac (850 MDL)</option>
+                                <option value="chipiu" data-price="260">Chipiu / Șapcă (260 MDL)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fas fa-ruler"></i> Alege mărimea:</label>
+                            <select id="garment-size">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M" selected>M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fas fa-fill-drip"></i> Culoarea hainei:</label>
+                            <div class="color-options">
+                                <input type="color" id="garment-color" value="#0a0f1d" onchange="updateCustomizerColor()">
+                                <span id="color-hex-label">Albastru Închis (#0a0f1d)</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fas fa-compass"></i> Poziția designului:</label>
+                            <select id="design-position" onchange="updateCustomizer()">
+                                <option value="Față" selected>Față</option>
+                                <option value="Spate">Spate</option>
+                                <option value="Mânecă">Mânecă</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fas fa-pen-nib"></i> Designul la haină (Text / Idee):</label>
+                            <input type="text" id="design-text" placeholder="Scrie textul sau descrierea picturii..." required oninput="updateCustomizerText()">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary"><i class="fas fa-cart-plus"></i> Adaugă în Coș & Plasează Comanda</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Lăsare Recenzie -->
+                <div class="review-section-box">
+                    <h3>Lasă o recenzie</h3>
+                    <form id="review-form" onsubmit="submitReview(event)">
+                        <div class="row-inputs">
+                            <input type="text" id="reviewer-name" placeholder="Numele tău" required>
+                            <select id="review-rating">
+                                <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+                                <option value="4">⭐⭐⭐⭐ (4/5)</option>
+                                <option value="3">⭐⭐⭐ (3/5)</option>
+                            </select>
+                        </div>
+                        <textarea id="reviewer-comment" placeholder="Scrie recenzia ta..." required></textarea>
+                        <button type="submit" class="btn-sm">Trimite Recenzia</button>
+                    </form>
+                    <div id="reviews-list" class="reviews-list">
+                        <div class="review-item">
+                            <strong>Alexandru M.</strong> <span>⭐⭐⭐⭐⭐</span>
+                            <p>Superb! Mi-am personalizat un tricou exact așa cum am dorit. Recomand cu încredere!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacte Section -->
+        <section id="contacte" class="contact-section">
+            <div class="container">
+                <h2>Contacte</h2>
+                <p class="section-desc">Te așteptăm la sediul nostru sau ne poți contacta online.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-info-card">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Număr de telefon</h4>
+                                <p><a href="tel:+37367255115">+373 67 255 115</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Gmail</h4>
+                                <p><a href="mailto:tintasutela@gmail.com">tintasutela@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adresă</h4>
+                                <p>str. Miron Costin 26/2, oficiul 225, MD-2068, Chișinău, Republica Moldova</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <h4>Instagram</h4>
+                                <p><a href="https://instagram.com/tintasutela.md" target="_blank">tintasutela.md</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-tiktok"></i>
+                            <div>
+                                <h4>TikTok</h4>
+                                <p><a href="https://tiktok.com/@fe.tintasutela.srl" target="_blank">fe.tintasutela.srl</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.123456789!2d28.855!3d47.035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c36a4b1b3b3%3A0x123456789abcdef!2sStrada%20Miron%20Costin%2026%2F2%2C%20Chi%C8%99in%C4%83u%2C%20Moldova!5e0!3m2!1sro!2smd!4v1700000000000!5m2!1sro!2smd" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 FE „TintaSuTela” SRL. Toate drepturile rezervate.</p>
+            <p class="footer-slogan">Creează. Pictează. Poartă.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Coș de Cumpărături -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h2>Coșul tău de cumpărături</h2>
+            <div id="cart-items-list">
+                <p>Coșul este gol momentan.</p>
+            </div>
+            <div class="cart-total">
+                <strong>Total: <span id="cart-total-price">0</span> MDL</strong>
+            </div>
+            <button class="btn-primary checkout-btn" onclick="checkoutOrder()">Plasează Comanda</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
