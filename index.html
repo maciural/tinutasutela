@@ -11,7 +11,7 @@
     <!-- Header & Navigation -->
     <header class="header">
         <div class="logo-container">
-            <img src="logo.jpg" alt="TintaSuTela Logo" class="logo-img">
+            <img src="images/logo.jpg" alt="TintaSuTela Logo" class="logo-img">
             <span class="company-name">FE „TintaSuTela” SRL</span>
         </div>
         <nav class="navbar">
@@ -31,10 +31,10 @@
 
     <main>
         <!-- 1. Acasă Section -->
-        <section id="acasa" class="hero" style="background-image: url('fundal.jpg');">
+        <section id="acasa" class="hero" style="background-image: url('images/fundal.jpg');">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <img src="logo.jpg" alt="Logo" class="hero-logo">
+                <img src="images/logo.jpg" alt="Logo" class="hero-logo">
                 <h1 class="slogan">Creează. Pictează. Poartă.</h1>
                 <p class="hero-subtitle">Transformă-ți ideile în haine unice, pictate și imprimate cu pasiune.</p>
                 <div class="hero-buttons">
@@ -63,6 +63,11 @@
                         <i class="fas fa-hat-cowboy"></i>
                         <h3>Chipiuri</h3>
                         <p>Accesorii stilate imprimate sau brodate după bunul plac.</p>
+                    </div>
+                    <div class="offering-card">
+                        <i class="fas fa-bag-shopping"></i>
+                        <h3>Genți textile</h3>
+                        <p>Genți moderne, personalizate cu designul tău.</p>
                     </div>
                 </div>
             </div>
@@ -97,117 +102,98 @@
         <section id="catalog" class="catalog-section">
             <div class="container">
                 <h2>Catalog produse</h2>
-                <p class="section-desc">Explorează colecția noastră împărțită pe categorii, alături de noutăți și oferte speciale.</p>
+                <p class="section-desc">Explorează produsele noastre împărțite pe categorii. Toate pot fi personalizate prin imprimare sau broderie.</p>
                 
                 <div class="catalog-filter-buttons">
                     <button class="filter-btn active" data-filter="all">Toate</button>
                     <button class="filter-btn" data-filter="tricouri">Tricouri & Maiouri (3)</button>
                     <button class="filter-btn" data-filter="hanorace">Hanorace (2)</button>
-                    <button class="filter-btn" data-filter="chipiuri">Chipiuri (2)</button>
-                    <button class="filter-btn" data-filter="noutati">Noutăți și Oferte</button>
+                    <button class="filter-btn" data-filter="chipiuri">Chipiuri (1)</button>
+                    <button class="filter-btn" data-filter="genti">Genți (1)</button>
                 </div>
 
                 <div class="products-grid" id="catalog-products">
-                    <!-- Tricouri (3 bucăți) -->
                     <div class="product-card" data-category="tricouri">
-                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Tricou 1">
+                        <img src="images/tricou-imprimat.jpg" alt="Tricou personalizat prin imprimare">
                         <div class="product-info">
                             <span class="badge">Tricouri</span>
-                            <h3>Tricou Pictat Manual „Galaxy”</h3>
-                            <p class="description">Bumbac 100%, culori textile rezistente la spălare.</p>
+                            <h3>Tricou personalizat prin imprimare</h3>
+                            <p class="description">Tricou cu designul tău imprimat, în culoarea aleasă de tine.</p>
                             <div class="price-row">
-                                <span class="price">450 MDL</span>
-                                <button class="btn-sm" onclick="addToCatalogCart('Tricou Pictat Galaxy', 450)">Adaugă în coș</button>
+                                <span class="price">330 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Tricou personalizat prin imprimare', 330)">Adaugă în coș</button>
                             </div>
                         </div>
                     </div>
                     <div class="product-card" data-category="tricouri">
-                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80" alt="Tricou 2">
+                        <img src="images/tricou-brodat.jpg" alt="Tricou personalizat prin broderie">
                         <div class="product-info">
                             <span class="badge">Tricouri</span>
-                            <h3>Tricou Abstract Streetart</h3>
-                            <p class="description">Design modern urban cu elemente grafice unice.</p>
+                            <h3>Tricou personalizat prin broderie</h3>
+                            <p class="description">Tricou unic cu broderie fină, executată cu grijă la detalii.</p>
                             <div class="price-row">
-                                <span class="price">390 MDL</span>
-                                <button class="btn-sm" onclick="addToCatalogCart('Tricou Abstract Streetart', 390)">Adaugă în coș</button>
+                                <span class="price">380 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Tricou personalizat prin broderie', 380)">Adaugă în coș</button>
                             </div>
                         </div>
                     </div>
                     <div class="product-card" data-category="tricouri">
-                        <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=600&q=80" alt="Maiou">
+                        <img src="images/maiou.jpg" alt="Maiou personalizat">
                         <div class="product-info">
-                            <span class="badge">Tricouri</span>
-                            <h3>Maiou Sport & Casual</h3>
-                            <p class="description">Maiou lejer pentru vară, personalizabil față/spate.</p>
+                            <span class="badge">Maiouri</span>
+                            <h3>Maiou personalizat</h3>
+                            <p class="description">Imprimăm designul tău pe maiouri. Prețul se stabilește în funcție de design.</p>
                             <div class="price-row">
-                                <span class="price">320 MDL</span>
-                                <button class="btn-sm" onclick="addToCatalogCart('Maiou Sport & Casual', 320)">Adaugă în coș</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hanorace (2 bucăți) -->
-                    <div class="product-card" data-category="hanorace">
-                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Hanorac 1">
-                        <div class="product-info">
-                            <span class="badge">Hanorace</span>
-                            <h3>Hanorac Oversized „TST Classic”</h3>
-                            <p class="description">Hanorac gros, pufos, cu broderie argintie pe piept.</p>
-                            <div class="price-row">
-                                <span class="price">850 MDL</span>
-                                <button class="btn-sm" onclick="addToCatalogCart('Hanorac Oversized TST Classic', 850)">Adaugă în coș</button>
+                                <span class="price on-request">Preț la cerere</span>
+                                <a href="#contacte" class="btn-sm">Cere ofertă</a>
                             </div>
                         </div>
                     </div>
                     <div class="product-card" data-category="hanorace">
-                        <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" alt="Hanorac 2">
+                        <img src="images/hanorac-imprimat.jpg" alt="Hanorac personalizat prin imprimare">
                         <div class="product-info">
                             <span class="badge">Hanorace</span>
-                            <h3>Hanorac Pictat „Midnight Neon”</h3>
-                            <p class="description">Ediție specială pictată manual cu efecte vizuale deosebite.</p>
+                            <h3>Hanorac personalizat prin imprimare</h3>
+                            <p class="description">Hanorac cosy & cool, imprimat după ideea ta.</p>
                             <div class="price-row">
-                                <span class="price">950 MDL</span>
-                                <button class="btn-sm" onclick="addToCatalogCart('Hanorac Midnight Neon', 950)">Adaugă în coș</button>
+                                <span class="price">440 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Hanorac personalizat prin imprimare', 440)">Adaugă în coș</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Chipiuri (2 bucăți) -->
-                    <div class="product-card" data-category="chipiuri">
-                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80" alt="Chipiu 1">
+                    <div class="product-card" data-category="hanorace">
+                        <img src="images/hanorac-brodat.jpg" alt="Hanorac personalizat prin broderie">
                         <div class="product-info">
-                            <span class="badge">Chipiuri</span>
-                            <h3>Șapcă Snapback „TST Monogram”</h3>
-                            <p class="description">Șapcă reglabilă cu broderie argintie metalizată.</p>
+                            <span class="badge">Hanorace</span>
+                            <h3>Hanorac personalizat prin broderie</h3>
+                            <p class="description">Hanorac cu broderie personalizată, pentru un look deosebit.</p>
                             <div class="price-row">
-                                <span class="price">280 MDL</span>
-                                <button class="btn-sm" onclick="addToCatalogCart('Șapcă Snapback TST Monogram', 280)">Adaugă în coș</button>
+                                <span class="price">490 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Hanorac personalizat prin broderie', 490)">Adaugă în coș</button>
                             </div>
                         </div>
                     </div>
                     <div class="product-card" data-category="chipiuri">
-                        <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=600&q=80" alt="Chipiu 2">
+                        <img src="images/sapca-brodata.jpg" alt="Șapcă sport cu broderie">
                         <div class="product-info">
                             <span class="badge">Chipiuri</span>
-                            <h3>Șapcă Classic Curved</h3>
-                            <p class="description">Design minimalist, bumbac 100% premium.</p>
+                            <h3>Șapcă sport cu broderie</h3>
+                            <p class="description">Șapcă sport din bumbac de înaltă calitate, cu broderie detaliată. Respirabilă și durabilă.</p>
                             <div class="price-row">
-                                <span class="price">250 MDL</span>
-                                <button class="btn-sm" onclick="addToCatalogCart('Șapcă Classic Curved', 250)">Adaugă în coș</button>
+                                <span class="price">200 MDL</span>
+                                <button class="btn-sm" onclick="addToCatalogCart('Șapcă sport cu broderie', 200)">Adaugă în coș</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Noutăți și oferte speciale -->
-                    <div class="product-card" data-category="noutati">
-                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80" alt="Ofertă">
+                    <div class="product-card" data-category="genti">
+                        <img src="images/geanta-textila.jpg" alt="Gentă textilă personalizată">
                         <div class="product-info">
-                            <span class="badge special">Ofertă Specială</span>
-                            <h3>Pachet Duo: Tricou + Șapcă</h3>
-                            <p class="description">Pachet promoțional cu reducere 15% inclusă.</p>
+                            <span class="badge">Genți</span>
+                            <h3>Gentă textilă personalizată</h3>
+                            <p class="description">Gentă textilă modernă, personalizată cu designul tău. Prețul se stabilește în funcție de design.</p>
                             <div class="price-row">
-                                <span class="price">650 MDL <del>730 MDL</del></span>
-                                <button class="btn-sm" onclick="addToCatalogCart('Pachet Duo Tricou + Șapcă', 650)">Adaugă în coș</button>
+                                <span class="price on-request">Preț la cerere</span>
+                                <a href="#contacte" class="btn-sm">Cere ofertă</a>
                             </div>
                         </div>
                     </div>
@@ -264,7 +250,7 @@
                             <span class="preview-pos-badge" id="pos-badge">Față</span>
                         </div>
                         <div class="price-tag-box">
-                            Preț estimat: <span id="dynamic-price">400 MDL</span>
+                            Preț estimat: <span id="dynamic-price">330 MDL</span>
                         </div>
                     </div>
 
@@ -272,10 +258,12 @@
                         <div class="form-group">
                             <label><i class="fas fa-tshirt"></i> Ce fel de haină vrei?</label>
                             <select id="garment-type" onchange="updateCustomizer()">
-                                <option value="maiou" data-price="320">Maiou (320 MDL)</option>
-                                <option value="tricou" data-price="400" selected>Tricou (400 MDL)</option>
-                                <option value="hanorac" data-price="850">Hanorac (850 MDL)</option>
-                                <option value="chipiu" data-price="260">Chipiu / Șapcă (260 MDL)</option>
+                                <option value="maiou" data-price="320" data-label="Maiou">Maiou (320 MDL)</option>
+                                <option value="tricou" data-price="330" data-label="Tricou - imprimare" selected>Tricou - imprimare (330 MDL)</option>
+                                <option value="tricou-broderie" data-price="380" data-label="Tricou - broderie">Tricou - broderie (380 MDL)</option>
+                                <option value="hanorac" data-price="440" data-label="Hanorac - imprimare">Hanorac - imprimare (440 MDL)</option>
+                                <option value="hanorac-broderie" data-price="490" data-label="Hanorac - broderie">Hanorac - broderie (490 MDL)</option>
+                                <option value="chipiu" data-price="200" data-label="Chipiu / Șapcă">Chipiu / Șapcă (200 MDL)</option>
                             </select>
                         </div>
 
