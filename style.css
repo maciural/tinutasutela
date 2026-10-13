@@ -139,16 +139,19 @@ ul {
     max-width: 800px;
 }
 
+/* Logo Mărit în Hero */
 .hero-logo {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 3px solid #c0c0c0;
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
+/* Slogan ușor micșorat */
 .slogan {
-    font-size: 3rem;
+    font-size: 2.3rem;
     font-weight: 800;
     color: #ffffff;
     margin-bottom: 15px;
@@ -203,7 +206,7 @@ ul {
 }
 
 /* Sections */
-.offerings-overview, .about-section, .catalog-section, .categories-section, .why-us-section, .customizer-section, .contact-section {
+.offerings-overview, .about-section, .catalog-section, .why-us-section, .customizer-section, .contact-section {
     padding: 90px 0;
 }
 
@@ -211,7 +214,7 @@ ul {
     background-color: #0b1120;
 }
 
-.about-section, .categories-section, .customizer-section {
+.about-section, .customizer-section {
     background-color: #070b16;
 }
 
@@ -310,20 +313,20 @@ h2 {
     border-color: #ffffff;
 }
 
-.products-grid, .popular-grid {
+.products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-.product-card, .popular-item {
+.product-card {
     background: #111827;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid rgba(192, 192, 192, 0.15);
 }
 
-.product-card img, .popular-item img {
+.product-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -374,23 +377,6 @@ h2 {
 .price del {
     color: #6b7280;
     font-size: 0.85rem;
-}
-
-.popular-item {
-    background: #0b1120;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.popular-item h4 {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-
-.pop-price {
-    color: #c0c0c0;
-    font-weight: 600;
 }
 
 /* CTA Banner */
@@ -724,6 +710,6 @@ footer {
         grid-template-columns: 1fr;
     }
     .slogan {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 }
