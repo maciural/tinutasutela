@@ -35,9 +35,9 @@ function updateCustomizer() {
     const icon = document.getElementById('garment-icon');
     if (garmentType === 'maiou') {
         icon.className = 'fas fa-vest fa-4x';
-    } else if (garmentType === 'tricou') {
+    } else if (garmentType.startsWith('tricou')) {
         icon.className = 'fas fa-tshirt fa-4x';
-    } else if (garmentType === 'hanorac') {
+    } else if (garmentType.startsWith('hanorac')) {
         icon.className = 'fas fa-vest-patches fa-4x';
     } else if (garmentType === 'chipiu') {
         icon.className = 'fas fa-hat-cowboy fa-4x';
@@ -61,13 +61,14 @@ function updateCustomizerText() {
 
 function handleCustomOrder(event) {
     event.preventDefault();
-    const garmentType = document.getElementById('garment-type').value;
+    const garmentSelect = document.getElementById('garment-type');
+    const garmentLabel = garmentSelect.options[garmentSelect.selectedIndex].getAttribute('data-label');
     const size = document.getElementById('garment-size').value;
     const position = document.getElementById('design-position').value;
     const designText = document.getElementById('design-text').value || 'Standard Design';
     const price = parseInt(document.getElementById('dynamic-price').innerText);
 
-    const itemName = `Personalizat: ${garmentType.toUpperCase()} (${size}), ${position}: "${designText}"`;
+    const itemName = `Personalizat: ${garmentLabel} (${size}), ${position}: "${designText}"`;
 
     cart.push({ name: itemName, price: price });
     updateCartUI();
